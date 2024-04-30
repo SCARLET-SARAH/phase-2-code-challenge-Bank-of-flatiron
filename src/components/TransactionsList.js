@@ -7,7 +7,7 @@ function TransactionsList() {
 
   
     useEffect(() => {
-      fetch('http://localhost:8001/transactions')
+      fetch('https://phase-2-code-challenge-bank-of-flatiron-2.onrender.com/transactions')
         .then(response => response.text())
         .then(data => console.log(data))
         .catch(error => console.error('Error fetching transactions:', error));
