@@ -1,13 +1,27 @@
 import React from "react";
 
 function Transaction({ transaction }) {
-  const { date, description, category, amount } = transaction;
+  function handleDelete(id)
+
+    {
+      fetch(`http://localhost:8001/transactions${id}`, {
+        method: "DELETE"
+      })
+      .then((data)=> data.json())
+      .then((res)=>{   
+        
+        alert("Transaction deleted successfully")
+
+      })
+    }
+
   return (
     <tr>
-      <td>{date}</td>
-      <td>{description}</td>
-      <td>{category}</td>
-      <td>{amount}</td>
+      <td>{transaction.date}</td>
+      <td>{transaction.description}</td>
+      <td>{transaction.category}</td>
+      <td>{transaction.amount}</td>
+      <td> <button  onClick = {()=> handleDelete(transaction.id)}>delete </button></td>      
     </tr>
   );
 }

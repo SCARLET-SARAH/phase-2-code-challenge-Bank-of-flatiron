@@ -5,12 +5,13 @@ function TransactionsList() {
   const [transactions, setTransactions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    fetch('http://localhost:8001/transactions')
-      .then(response => response.json())
-      .then(data => setTransactions(data))
-      .catch(error => console.error('Error fetching transactions:', error));
-  }, []);
+  
+    useEffect(() => {
+      fetch('http://localhost:8001/transactions')
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error fetching transactions:', error));
+    }, []);
   const filteredTransactions = transactions.filter(transaction =>
     transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
   );

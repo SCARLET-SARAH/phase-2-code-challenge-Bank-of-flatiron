@@ -9,10 +9,10 @@
     "semantic-ui-css": "^2.2.10"
   },
   "devDependencies": {
-    "json-server": "^0.15.1"
+    "json-server": "^0.17.4"
   },
   "scripts": {
-    "start": "PORT=8000 react-scripts --openssl-legacy-provider start",
+    "start": "PORT=8000 react-scripts start",
     "server": "json-server --watch db.json -p 8001",
     "build":"react-scripts build"
   },
