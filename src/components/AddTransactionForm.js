@@ -1,6 +1,7 @@
-import React,{ useState } from "react";
+import React, {useState} from "react";
 
 function AddTransactionForm() {
+
   const [formData, setFormData] = useState({
     date: "",
     name : "",
