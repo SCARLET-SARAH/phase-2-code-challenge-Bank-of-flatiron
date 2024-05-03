@@ -11,7 +11,7 @@ function TransactionsList({searchValue}) {
  console.log(searchValue)
 
   useEffect(()=>{
-    fetch("https://phase-2-code-challenge-bank-of-flatiron-2.onrender.com/transactions")
+    fetch("https://phase-2-code-challenge-bank-of-flatiron-2.onrender.com/transactions/")
       .then(res => res.json())
       .then((data) => {
         setTransactions(data)

@@ -4,7 +4,7 @@ function Transaction({ transaction }) {
   function handleDelete(id)
 
     {
-      fetch(`https://phase-2-code-challenge-bank-of-flatiron-2.onrender.com/transactions${id}`, {
+      fetch(`https://phase-2-code-challenge-bank-of-flatiron-2.onrender.com/transactions/${id}`, {
         method: "DELETE"
       })
       .then((data)=> data.json())

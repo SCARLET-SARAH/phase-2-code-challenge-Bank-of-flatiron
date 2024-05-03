@@ -9,7 +9,7 @@ function TransactionForm({ onAddTransaction }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTransaction = { date, description, category, amount };
-    fetch('https://phase-2-code-challenge-bank-of-flatiron-2.onrender.com/transactions', {
+    fetch('https://phase-2-code-challenge-bank-of-flatiron-2.onrender.com/transactions/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
